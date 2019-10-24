@@ -1,0 +1,4 @@
+﻿  LabaAlgo 4.cpp
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\LabaAlgo 4\LabaAlgo 4.cpp(7,10): warning C4477:  "scanf_s": в строке форматирования "%u" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "int **"
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\LabaAlgo 4\LabaAlgo 4.cpp(13,10): warning C4101:  j: неиспользованная локальная переменная
+  LabaAlgo 4.vcxproj -> C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\Debug\LabaAlgo 4.exe
