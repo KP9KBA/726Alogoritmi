@@ -1,2 +1,4 @@
 ﻿  VseZadaniya_LabaAlgo 3.cpp
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\VseZadaniya_LabaAlgo 3\VseZadaniya_LabaAlgo 3\VseZadaniya_LabaAlgo 3.cpp(54,13): warning C4101: j: неиспользованная локальная переменная
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\VseZadaniya_LabaAlgo 3\VseZadaniya_LabaAlgo 3\VseZadaniya_LabaAlgo 3.cpp(54,10): warning C4101: i: неиспользованная локальная переменная
   VseZadaniya_LabaAlgo 3.vcxproj -> C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\VseZadaniya_LabaAlgo 3\Debug\VseZadaniya_LabaAlgo 3.exe

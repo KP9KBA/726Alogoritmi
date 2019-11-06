@@ -1,15 +1,17 @@
-﻿#include <stdio.h>
-#include <locale.h>//задает ф-ю setlocale()
+﻿#include <iostream>
+//#include <locale.h>//задает ф-ю setlocale()
 #include <cstdlib>//для включени рандомных чисел в массиве
 #include <ctime>//для задания ф-и rand()
-#define N 5
+//#define N 5
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-	int *a;
+	int a;
+	int* p;
+	p = &a;
 	printf("Введите номер задания: \n");
 	scanf_s("%u", &a);
-	switch (*a) {
+	switch (a) {
 	case 1: {
 		/*В заданном целочисленном массиве a1, a2, … , an вычислить количество, сумму 
 		и произведение нечетных чисел.Учесть возможность того, что нечетных чисел в массиве может
@@ -17,7 +19,7 @@ int main() {
 		int i, y = 0, c;
 		int arr[5];
 		srand(time(NULL));
-		arr[i] = rand() % 100;
+		arr[5] = rand() % 100;//применяется значение только для 4 элемента
 		for (i = 0; i < 5; i++) {
 			printf("%d\n", arr[i]);
 		}
@@ -34,12 +36,14 @@ int main() {
 
 	}break;
 	case 2: {
-	int arr[N], i, min, max, b;
+		/*В заданном массиве a1, a2, … , an поменять местами максимальный и 
+минимальный элементы*/
+	int arr[5], i, min, max, b;
     srand(time(NULL));
     min = 0;
     max = 0;
 	for (i=0; i<N; i++) {
-        arr[i] = rand() % 100;
+        arr[i] = rand ();
         printf("%d ", arr[i]);
         if (arr[i] < arr[min]) min = i;
         if (arr[i] > arr[max]) max = i;
@@ -57,14 +61,14 @@ int main() {
 	case 3: {
 		/*Дан массив a1, a2, … , an и число b. Разработать программу удаления из массива
 всех элементов, меньших заданного значения b.*/
-		int i, arr[N]; int* b;
+	/*	int i, arr[N]; int* b;
 		srand(time(0));
 		printf("Введите b\n");
 		scanf("%i", &b);
 		for (i = 0; i < N; i++) {
 			arr[N] = rand() % 100;
 			printf("%d\n", arr[i]);
-			if (arr[i] < b) {
+			//if (arr[i] < b) {
 				arr[i] = arr[i + 1];
 			}
 
