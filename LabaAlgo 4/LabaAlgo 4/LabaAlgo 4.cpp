@@ -18,8 +18,9 @@ int main() {
 		int i, y = 0, c;
 		int arr[5];
 		srand(time(NULL));
-		arr[5] = rand() % 100;//применяется значение только для 4 элемента
+		
 		for (i = 0; i < 5; i++) {
+			arr[i] = rand() % 100;
 			printf("%d\n", arr[i]);
 		}
 		for (i = 0; i < 5; i++) {//алгоритм проверки 
@@ -71,14 +72,14 @@ int main() {
 			printf("%d ", arr[i]);			
 		}
 		printf("\n");
-		for (j = 0; j <= 5; j++) {
+		for (j = 0; j <= 4; j++) {
 			if (arr[j] < b) {
 				arr[j] = 0;
 			}
 
 		}
 		printf("новый массив \n");
-		for (i = 0; i <= 5; i++) {
+		for (i = 0; i <= 4; i++) {
 			printf("%d ", arr[i]);
 		}
 		printf("\n");
@@ -99,7 +100,6 @@ int main() {
 				y = abs(arr[i+1]);//минимальное по модулю число
 				
 			}
-			printf("%d ", y);
 		}
 		printf("\n");
 		printf("новые значения массива \n");
