@@ -1,0 +1,5 @@
+﻿  LabaAlgo 6.cpp
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 6\LabaAlgo 6\LabaAlgo 6.cpp(20,11): warning C4477: "scanf_s": в строке форматирования "%i" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "int"
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 6\LabaAlgo 6\LabaAlgo 6.cpp(25,11): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "int *"
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 6\LabaAlgo 6\LabaAlgo 6.cpp(37,11): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "int *"
+  LabaAlgo 6.vcxproj -> C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 6\Debug\LabaAlgo 6.exe
