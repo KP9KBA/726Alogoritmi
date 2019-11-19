@@ -13,28 +13,7 @@ int main() {
 Последовательно ввести с клавиатуры все элементы массива. Отсортировать его по
 возрастанию модифицированным МЕТОДОМ ПРОСТОГО ВЫБОРА. Вывести получивший массив
 на экран.*/
-		/*int* a;
-		int i, j;
-		int c = 0;
-		int N;
-		int ind;
-		printf("Введите количество элементов массива\n");
-		scanf_s("%i", &N);
-		a = new int [N];
-		printf("Введите элементы массива\n");
-		for (i = 0; i < N; i++) {
-			scanf_s("%d", &a[i]);
-			c = a[i];
-		}
-		for (i = 0; i < N; i++) {
-			for(j = i ,c=a[i]; j>0 && c=a[j-1];j--){
-				a[j] = a[j - 1];
-			}
-			a[j] = c;
-		}
-		for (int i = 0; i < N; i++) //Выводим отсортированный масив
-			printf("%i ", a[i]);*/
-		int N; 
+		/*int N; 
 		int* a;
 		int step ;
 		double k = 1.247;
@@ -56,7 +35,27 @@ int main() {
 			}
 		}
 		for (int i = 0; i < N; i++) //Выводим отсортированный масив
-			printf("%i ", a[i]);
+			printf("%i ", a[i]);*/
+		int i, x=0, N, j;
+		int* mas;
+		printf("Введите количество элементов массива ");
+		scanf_s("%d", &N);
+		mas = new int[N];
+		printf("Введите элементы массива\n");
+		for (i = 0; i < N; i++) {
+			scanf_s("%d", &mas[i]);
+		
+		}
+		for (i = 0; i < N; i++) {
+			for (j = i, x = mas[j]; j > 0&&x<mas[j-1]; j--) {
+				mas[j] = mas[j - 1];
+				
+			}
+			mas[j]=x;
+		}
+		for (int i = 0; i < N; i++) //Выводим отсортированный масив
+			printf("%i ", mas[i]);
+
 
 	}break;
 	case 2: {
@@ -99,19 +98,17 @@ int main() {
 		int N;
 		int** a;
 		int i, j, c;
-		int* b;
 		printf("Введите размер квадратной матрицы ");
 		scanf_s("%d", &N);
 		a = new int* [N];
-		b = new int[N];
 		for (i = 0; i < N; i++) {//задаем значения матрицы
-			a[i] = new int [N];
+			a[i] = new int [N,N];
 			for (j = 0; j < N; j++) {
 				cout << "введите значение елемента такой позиции" << " [" << i << "][" << j << "]" << " = ";
 				scanf_s("%d", &a[i][j]);
 			}
 		}
-		for (i = 0; i < N; i++) {
+		for (i = 0; i < N-1; i++) {
 			if (a[i][i] > a[i + 1][i + 1]) {
 				c = a[i][i];
 				a[i][i] = a[i + 1][i + 1];
@@ -121,7 +118,7 @@ int main() {
 		
 		for (i = 0; i < N; i++) {
 			for (j = 0; j < N; j++) {
-				printf("%d", a[i][j]);
+				printf("%d ", a[i][j]);
 			}
 			printf("\n");
 		}
