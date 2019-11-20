@@ -66,7 +66,7 @@ int main() {
 		int N;
 		int* a;
 		int c;
-		int i, j;
+		int i=0, j=0;
 		printf("Введите количество элементов одномерного массива ");
 		scanf_s("%d", &N);
 		a = new int [N];
@@ -77,7 +77,7 @@ int main() {
 		}
 		printf("\n");
 		for (i = 0; i < N; i++) {
-			for (j = 0; j < N-i; j++) {
+			for (j = 0; j < N-1; j++) {
 				if (a[j] > a[j + 1]) {
 					c = a[j];
 					a[j] = a[j + 1];
@@ -86,8 +86,9 @@ int main() {
 				}
 			}
 		}
+		
 		for (i = 0; i < N; i++) {
-			printf("%d", a[i]);
+			printf("%d ", a[i]);
 		}
 
 	}break;
