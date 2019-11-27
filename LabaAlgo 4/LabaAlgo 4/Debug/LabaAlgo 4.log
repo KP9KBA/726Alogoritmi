@@ -1,6 +1,7 @@
 ﻿  LabaAlgo 4.cpp
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\LabaAlgo 4\LabaAlgo 4.cpp(20,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\LabaAlgo 4\LabaAlgo 4.cpp(19,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\LabaAlgo 4\LabaAlgo 4.cpp(41,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\LabaAlgo 4\LabaAlgo 4.cpp(17,17): warning C4101: c: неиспользованная локальная переменная
 C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\LabaAlgo 4\LabaAlgo 4.cpp(63,21): warning C4101: y: неиспользованная локальная переменная
 C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\LabaAlgo 4\LabaAlgo 4.cpp(89,23): warning C4101: b: неиспользованная локальная переменная
   LabaAlgo 4.vcxproj -> C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 4\Debug\LabaAlgo 4.exe

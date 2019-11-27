@@ -6,10 +6,9 @@
 int main() {
 	setlocale(LC_ALL, "Rus");
 	int a;
-	int* p;
-	p = &a;
+
 	printf("Введите номер задания: \n");
-	scanf_s("%u", &a);
+	scanf_s("%d", &a);
 	switch (a) {
 	case 1: {
 		/*В заданном целочисленном массиве a1, a2, … , an вычислить количество, сумму 
@@ -24,15 +23,15 @@ int main() {
 			printf("%d\n", arr[i]);
 		}
 		for (i = 0; i < 5; i++) {//алгоритм проверки 
-			c = arr[i] % 2;
-			if (c != 0) {//проверка нечетных чисел массива
+			//c = arr[i] % 2;
+			if (arr[i] % 2 != 0) {//проверка нечетных чисел массива
 				y += arr[i];
 
 			}
 
 		}
-		printf("Сумма нечетных массивов ");
-		printf("%d\n", y);
+		printf("Сумма нечетных массивов %d\n",y);
+		//printf("%d\n", y);
 
 	}break;
 	case 2: {
@@ -43,7 +42,7 @@ int main() {
     min = 0;
     max = 0;
 	for (i=0; i<5; i++) {
-        arr[i] = rand ();
+        arr[i] = rand ()%50-25;
         printf("%d ", arr[i]);
         if (arr[i] < arr[min]) min = i;
         if (arr[i] > arr[max]) max = i;
@@ -61,18 +60,18 @@ int main() {
 	case 3: {
 		/*Дан массив a1, a2, … , an и число b. Разработать программу удаления из массива
 всех элементов, меньших заданного значения b.*/
-		int i, arr[5], b, y, * B, j;
-		B = &b;
+		int i, arr[5], b, y, j;
+		
 		//srand(time(0));
 		printf("Введите b\n");
-		scanf_s("%i", &b);
+		scanf_s("%d", &b);
 		printf("значения массива \n");
-		for (i = 0; i <= 4; i++) {
+		for (i = 0; i < 5; i++) {
 			arr[i] = rand() % 100;
 			printf("%d ", arr[i]);			
 		}
 		printf("\n");
-		for (j = 0; j <= 4; j++) {
+		for (j = 0; j < 5; j++) {
 			if (arr[j] < b) {
 				arr[j] = 0;
 			}

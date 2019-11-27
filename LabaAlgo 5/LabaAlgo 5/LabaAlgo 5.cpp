@@ -33,7 +33,8 @@ int main() {
 				
 				if (a[i][j] > max) {
 					max = a[i][j];
-					maxi = i; maxj = j;
+					maxi = i;
+					maxj = j;
 				}
 				if (a[i][j] < min)
 				{
@@ -103,14 +104,17 @@ int main() {
 столбец – сумма в соответствующей строке, второй – произведение).*/
 		int N, M;
 		int** a;
+		int** b;
 		int i, j;
-		int b[4][2];
 		int sum = 0, pro = 1;
 		cout << "Введите размер матрицы (строка х столбец)" << endl;//строкаi на столбецj
 		cin >> N >> M;
-		a = new int* [N,M];//строка столбец
+
+		a = new int* [N];//строка столбец
+		b = new int* [N];
 		for (int i = 0; i < N; i++) {
-			a[i] = new int[N];
+			a[i] = new int[M];
+			b[i] = new int[M];
 			for (int j = 0; j < M; j++) {
 				
 				cout << "введите значение елемента такой позиции" << " [" << i << "][" << j << "]" << " = ";
@@ -132,13 +136,13 @@ int main() {
 			}
 			j = 0;
 			b[i][j] = sum;
-			b[i][j+=1] = pro;
+			b[i][j++] = pro;
 		}
-		for (i = 0; i < 4; i++) {
-			for (j = 0; j < 2; j++) {
+		for (i = 0; i < N; i++) {
+			for (j = 0; j < M; j++) {
 				printf("%d  ", b[i][j]);
 			}
-			printf("\n");
+			printf("\n");//исправить
 		}
 	}break;
 	case 4: {
