@@ -55,7 +55,7 @@ int main() {
 		}
 		for (int i = 0; i < N; i++) //Выводим отсортированный масив
 			printf("%i ", mas[i]);
-
+		delete[]mas;
 
 	}break;
 	case 2: {
@@ -70,10 +70,15 @@ int main() {
 		printf("Введите количество элементов одномерного массива ");
 		scanf_s("%d", &N);
 		a = new int [N];
-		for (int i = 0; i < N; i++) /* Заполняем массив*/
+		/*for (int i = 0; i < N; i++) /* Заполняем массив
 		{
 			printf("a[%i]: ", i);
 			scanf_s("%d", &a[i]);
+		}*/
+		printf("Введите элементы массива\n");
+		for (i = 0; i < N; i++) {
+			scanf_s("%d", &a[i]);
+
 		}
 		printf("\n");
 		for (i = 0; i < N; i++) {
@@ -90,7 +95,7 @@ int main() {
 		for (i = 0; i < N; i++) {
 			printf("%d ", a[i]);
 		}
-
+		delete[]a;
 	}break;
 	case 3: {
 		/*Ввести с клавиатуры число N – размер квадратной матрицы. Последовательно
@@ -103,17 +108,19 @@ int main() {
 		scanf_s("%d", &N);
 		a = new int* [N];
 		for (i = 0; i < N; i++) {//задаем значения матрицы
-			a[i] = new int [N,N];
+			a[i] = new int [N];
 			for (j = 0; j < N; j++) {
 				cout << "введите значение елемента такой позиции" << " [" << i << "][" << j << "]" << " = ";
 				scanf_s("%d", &a[i][j]);
 			}
 		}
-		for (i = 0; i < N-1; i++) {
-			if (a[i][i] > a[i + 1][i + 1]) {
-				c = a[i][i];
-				a[i][i] = a[i + 1][i + 1];
-				a[i + 1][i + 1] = c;
+		for (int j = 0; j < N; j++) {
+			for (i = 0; i < N - 1; i++) {
+				if (a[i][i] > a[i + 1][i + 1]) {
+					c = a[i][i];
+					a[i][i] = a[i + 1][i + 1];
+					a[i + 1][i + 1] = c;
+				}
 			}
 		}
 		
@@ -123,6 +130,7 @@ int main() {
 			}
 			printf("\n");
 		}
+		delete[]a;
 	}break;
 	}
 

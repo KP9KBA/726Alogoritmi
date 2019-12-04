@@ -17,7 +17,7 @@ int main() {
 		cout << "Введите степень 2 " << endl;
 		cin >> N;
 		for (n = 1; n <= N; n++) {
-			y *=2;
+			y *= 2;
 		}
 		cout << "Результат возведения в степень равен " << y << endl;
 	}break;
@@ -58,25 +58,25 @@ int main() {
 		{
 			for (int j = 1; j <= N; j++)
 			{
-				cout << i * j << ' '; //sizeof() - 
+				cout << i * j << ' ';
+				cout << '\n';
 			}
-			cout << '\n';
-		}
 
-		/*cout << endl << setw(20) << left << dannoe1 << setw(20) << left << dannoe2 << setw(20) << left << dannoe3*/
-		/*int N;
-		cout << "Введите число N" << endl;
-		cin >> N;
-		int m_x[N];
-		int m_y[N];
-		int i, j, Z[m_x][m_y];
-		for (j = 0; j < N; j++) {
-			for (i = 0; i < (N - 1); i++) {
-				Z[N][N] = m_x[j] * m_y[i];
-				cout << Z[j][i];
+			/*cout << endl << setw(20) << left << dannoe1 << setw(20) << left << dannoe2 << setw(20) << left << dannoe3*/
+			/*int N;
+			cout << "Введите число N" << endl;
+			cin >> N;
+			int m_x[N];
+			int m_y[N];
+			int i, j, Z[m_x][m_y];
+			for (j = 0; j < N; j++) {
+				for (i = 0; i < (N - 1); i++) {
+					Z[N][N] = m_x[j] * m_y[i];
+					cout << Z[j][i];
+				}
 			}
+			*/
 		}
-		*/
 	}break;
 	case 5: {
 		int b, a;
@@ -97,7 +97,9 @@ int main() {
 		else {
 			cout << "Введите значение переменной b больше 100" << endl;
 		}
+	   }
 	}
-	}
+
+	
 	return 0;
 }

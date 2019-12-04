@@ -1,15 +1,4 @@
 ﻿  zadanie 3.3.cpp
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(21,7): error C2086: int N: переопределение
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(8): message : см. объявление "N"
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(24,10): error C2131: выражение не определяется константой
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(24,10): message : сбой вызван чтением переменной вне срока ее существования
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(24,10): message : см. использование "N"
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(25,10): error C2131: выражение не определяется константой
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(25,10): message : сбой вызван чтением переменной вне срока ее существования
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(25,10): message : см. использование "N"
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(26,7): error C2086: int i: переопределение
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(8): message : см. объявление "i"
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(26,10): error C2086: int j: переопределение
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(8): message : см. объявление "j"
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(29,29): error C3863: тип массива "int [m_x][m_y]" является неназначаемым
-C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(30,9): warning C4552: "<<": результат выражения не используется
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(5,12): warning C4101: j: неиспользованная локальная переменная
+C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\zadanie 3.3\zadanie 3.3.cpp(5,9): warning C4101: i: неиспользованная локальная переменная
+  zadanie 3.3.vcxproj -> C:\Users\Оля\Documents\GitHub\726Alogoritmi\LabaAlgo 3\zadanie 3.3\Debug\zadanie 3.3.exe
