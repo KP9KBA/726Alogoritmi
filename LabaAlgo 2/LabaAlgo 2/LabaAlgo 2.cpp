@@ -74,12 +74,50 @@ int main() {
 
 				}
 			}
-			return 0;
-		}
+			
 	
 	}break;
-	case 3: {}break;
-	case 4: {}break;
+	case 3: {
+		int massiv[3];
+		cout << "Введите три числа: ";
+		for (int i = 0; i < 3; i++) {
+			cin >> massiv[i];
+		}
+		cout << endl << "Числа в диапозоне (2;5): ";
+		for (int i = 0; i < 3; i++) {
+			if (massiv[i] < 5 && massiv[i] > 2) {
+				cout << massiv[i] << " ";
+			}
+		}
+		cout << endl << "Числа вне диапозона (2;5): ";
+		for (int i = 0; i < 3; i++) {
+			if (massiv[i] > 5 || massiv[i] < 2) {
+				cout << massiv[i] << " ";
+			}
+		}
+		cout << endl << "Числа на границе (2;5): ";
+		for (int i = 0; i < 3; i++) {
+			if (massiv[i] == 5 || massiv[i] == 2) {
+				cout << massiv[i] << " ";
+			}
+		}
+	}break;
+	case 4: {int n;
+		cout << "Введите возраст: ";
+		cin >> n;
+		if (n % 10 == 1 && n != 11) {
+			cout << n << " год";
+		}
+		else {
+			if ((n % 10 == 2 || n % 10 == 3 || n % 10 == 4) && n != 12 && n != 13 && n
+				!= 14) {
+				cout << n << " года";
+			}
+			else {
+				cout << n << " лет";
+			}
+		}
+	}break;
 	}
 	return 0;
 }

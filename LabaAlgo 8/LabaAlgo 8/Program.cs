@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace LabaAlgo_8
 {
@@ -145,13 +146,105 @@ namespace LabaAlgo_8
                 case 5:
                     {
                         /*Работа с текстовыми файлами. Программа должна уметь:
-    • Записывать в текстовый файл информацию, вводимую с клавиатуры
-    • Считывать на экран информацию из текстового файла
-    • Организовать построчное считывание файла и запись строк задом наперед
-    • Найти самую длинную строку в файле. Вывести ее.
-    • Перемешать строки в файле случайным образом.*/
+    • Записывать в текстовый файл информацию, вводимую с клавиатуры +
+    • Считывать на экран информацию из текстового файла +
+    • Организовать построчное считывание файла (-) и запись строк задом наперед +
+    • Найти самую длинную строку в файле. Вывести ее. +
+    • Перемешать строки в файле случайным образом. +
+    */
 
-                    
+                        //файл C:\Users\Оля\Desktop
+
+                        // создаем каталог для файла
+                        string path = @"C:\Users\Оля\Desktop\1.txt";
+                      
+                        Console.WriteLine("Введите строку для записи в файл:");
+                        string text = Console.ReadLine();
+                        // запись в файл
+                        using (FileStream fstream = new FileStream(path, FileMode.Append))
+                        {
+                            using (StreamWriter stream = new StreamWriter(fstream,Encoding.Default))
+                            {
+                                // преобразуем строку в байты и добавляем переход на новую строку для дальнейшего удобства
+                                byte[] array = System.Text.Encoding.Default.GetBytes(text+"\n");
+                                // запись массива байтов в файл
+                                fstream.Write(array, 0, array.Length);
+                                Console.WriteLine("Текст записан в файл");
+                                Console.WriteLine("\n");
+                            }
+                            using (StreamReader stream1 = new StreamReader(path))
+                            {
+                                //Считывание файла полностью
+                                Console.WriteLine("Считывание информации из текстового файла:");
+                                Console.WriteLine(stream1.ReadToEnd());
+                                Console.WriteLine("\n");
+                            }
+                             
+                            using (StreamReader stream2=new StreamReader(path))
+                            {
+                                string line;
+                                File.ReadAllLines(path);
+                            }
+                            using (StreamReader stream3=new StreamReader(path))
+                            {
+                                //Считываем наоборот
+                                Console.WriteLine("Считывание строк наоборот:");
+                                int count = System.IO.File.ReadAllLines(path).Length;
+                                string SSS = ""; string ZZZ = "";
+                                for (int i = 0; i < count; i++)
+                                {
+                                    SSS = stream3.ReadLine();
+                                    for (int j = SSS.Length - 1; j >= 0; j--)
+                                        ZZZ = ZZZ + SSS[j];
+                                    Console.WriteLine(ZZZ); ZZZ = "";
+                                }
+                                Console.WriteLine("\n");
+                            }
+
+                            using (StreamReader stream4 = new StreamReader(path))
+                            {
+                                //Поиск самой длинной строки
+                                Console.WriteLine();
+                                Console.WriteLine("Самая длинная строка: ");
+                                string s1, s2 = "";
+                                while (!stream4.EndOfStream)
+                                {
+                                    s1 = stream4.ReadLine();
+                                    if (s1.Length > s2.Length) s2 = s1;
+                                }
+                                Console.WriteLine(s2);
+                                Console.WriteLine("\n");
+
+                            }
+                            
+                            using (StreamReader stream5 =new StreamReader(path)) 
+                            {
+                                //Перемешать строки
+                                Console.WriteLine("Перемешать строки: \n");
+                                int count1 = System.IO.File.ReadAllLines(path).Length;
+                                Random rand = new Random();
+                                List<string> data = new List<string>();
+                                string C;
+                                for (int i = 0; i < count1; i++)
+                                {
+                                    C = stream5.ReadLine(); data.Add(C);
+                                }
+                                for (int i = data.Count - 1; i >= 1; i--)
+                                {
+                                    int j = rand.Next(i + 1);
+                                    var temp = data[j];
+                                    data[j] = data[i];
+                                    data[i] = temp;
+                                }
+                                for (int i = 0; i < data.Count; i++)
+                                    Console.WriteLine(data[i]);
+                                Console.WriteLine(stream5.ReadToEnd());
+                                Console.WriteLine("\n");
+                            }
+                            
+                            
+                        }
+                        
                     }
                     break;
                 
